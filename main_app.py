@@ -1,14 +1,16 @@
-from db_back.db_conn import engine
+from db_back.db_table import collision
 import pandas as pd
 import numpy as np
 import datetime as dt
 import time
+import math
 
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 import seaborn as sns
+import streamlit as st
 
 import warnings
 
@@ -44,10 +46,10 @@ def reg_prep_data(data1, data2):
         return e
 
 
-collision = pd.read_sql('SELECT * FROM collision', engine)
-bicycle = pd.read_sql('SELECT * FROM bicycle', engine)
-routes = pd.read_sql('SELECT * FROM routes', engine)
-traffic = pd.read_sql('SELECT * FROM traffic', engine)
+####################################################################################
+st.title('Calculadora de Siniestros Viales en la ciudad de New York')
+st.caption('Grupo 3 | Henry')
+####################################################################################
 
 # Eliminacion de columnas que no aportan mucho al modelado
 collision.drop(collision.filter(regex='vehicle_2|vehicle_3|vehicle_4|vehicle_5|code_2|code_3|code_4|code_5').columns,
@@ -88,14 +90,9 @@ for i in range(2):
     # Lower bound
     lower = np.where(regtree['number_of_persons_injured'] <= (Q1 - 1.5 * IQR))
 
-    ''' Removing the Outliers '''
     regtree.drop(upper[0], inplace=True)
     regtree.drop(lower[0], inplace=True)
     regtree = regtree.reset_index(drop=True)
-##########################################################################################
-# Grafico de los datos a medir
-sns.scatterplot(data=regtree, x='Time', y='number_of_persons_injured')
-
 ##########################################################################################
 # Primer modelo de prueba
 model = LinearRegression(fit_intercept=True)
@@ -106,9 +103,6 @@ model.fit(X_train, y_train)
 y_train_pred = model.predict(X_train)
 y_test_pred = model.predict(X_test)
 
-print('Error en datos de train:', mean_squared_error(y_train, y_train_pred))
-print('Error en datos de test:', mean_squared_error(y_test, y_test_pred))
-
 plt.figure(figsize=(7, 6))
 plt.scatter(X_train, y_train, color='green', label='Blue Train')
 plt.plot(X_train, y_train_pred, color='k', linestyle='--', label='Prediccion Train')
@@ -117,10 +111,25 @@ plt.scatter(X_test, y_test, color='blue', label='Blue Test')
 plt.plot(X_test, y_test_pred, color='red', linewidth=3.0, label='Prediccion Test')
 
 plt.legend()
-plt.show()
 ##########################################################################################
 # Modelo de prediccion
 modelo = LinearRegression()
 modelo.fit(regtree[['Date', 'Time']], regtree.number_of_persons_injured)
+
+####################################################################################
+st.markdown('Ingreso de datos para prediccion')
+with st.container():
+    date = st.date_input('Dia a proyectar')
+    time_inp = st.time_input('Hora a proyectar', dt.time(0, 0))
+
+date = date.toordinal()
+time_inp = get_sec(str(time_inp))
 # Recibe fecha (ordinal) y hora (segundos)
-modelo.predict([[737435, 60000]])
+pred = math.ceil(modelo.predict([[date, time_inp]])[0])
+if st.button('Calcular'):
+    if pred < 0:
+        st.text(f'{pred * -1} incidentes aprox.')
+    else:
+        st.text(f'{pred} incidentes aprox.')
+else:
+    st.write(' ')
