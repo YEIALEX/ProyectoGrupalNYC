@@ -1,0 +1,46 @@
+version: '3.8'
+services:
+  dynamodb-local:
+    image: amazon/dynamodb-local
+    container_name: dynamodb-local-v1
+    ports: 
+      - "8000:8000"
+  
+  dynamodb-admin:
+    image: aaronshaf/dynamodb-admin
+    ports:
+      - "8001:8001"
+    environment:
+      DYNAMO_ENDPOINT: "http://dynamodb-local:8000"
+      AWS_REGION: "us-east-1"
+      AWS_ACCESS_KEY_ID: AKIAZ7XVKJOZLAB6ECM4
+      AWS_SECRET_ACCESS_KEY: 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  
+    depends_on:
+      - dynamodb-local
+  
+  db:
+    image: postgres:14.3
+    restart: always
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: root
+    volumes:
+      - db_postgres:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+
+volumes:
+  db_postgres:
+
