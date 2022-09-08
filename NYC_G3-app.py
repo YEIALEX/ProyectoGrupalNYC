@@ -64,6 +64,6 @@ c4.write('Adicionalmente, se hace entrega del respectivo Manual de Usuario para 
 c4.caption('_Para acceder a Documentos ingrese aquí: [Docs](%s)_' % docs,)
 c4.caption('_Para acceder a Dashboard ingrese aquí: [Dashboard](%s)_' % dash)
 
-c4.image(image5, width=15)
+c4.image(image5, width=30)
 st.caption('_**HENRY**_')
 st.markdown("<a href='#an-lisis-de-accidentalidad-en-la-ciudad-de-new-york'>Ir Arriba ^</a>", unsafe_allow_html=True)
