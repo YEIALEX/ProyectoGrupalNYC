@@ -1,7 +1,8 @@
 from sqlalchemy import create_engine
 from sqlalchemy_utils import create_database, database_exists
+import streamlit as st
 
-url = 'mysql://admin:dNUDifZnz5V4QiH@nyc-1.cidguezqij2o.us-east-1.rds.amazonaws.com/nyc'
+url = f'mysql://{st.secrets["DB_USERNAME"]}:{st.secrets["DB_PASSWORD"]}@{st.secrets["DB_URL"]}'
 engine = create_engine(url)
 
 if not database_exists(engine.url):

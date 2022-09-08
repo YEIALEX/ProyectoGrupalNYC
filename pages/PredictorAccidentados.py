@@ -111,8 +111,9 @@ X2_train, X2_test, y2_train, y2_test = train_test_split(X2, y2, test_size=0.35, 
 
 reg_tree2 = DecisionTreeRegressor(criterion='squared_error', max_depth=20, random_state=0)
 reg_tree2.fit(X2_train, y2_train)
-
 ########################################################################################################################
+
+
 def main():
     page = st.radio('Seleccione el modo', page_names)
     if page == 'Dia':
