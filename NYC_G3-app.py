@@ -32,31 +32,34 @@ c1.image(image2, caption='Accidente', width=350)
 
 st.subheader('_Solución Propuesta_')
 c2 = st.container()
+img2 = c2.image(image3, width=15)
 c2.write('Para llevar a cabo el proyecto, se ideo un alcance en el que se especifican todas las '
          'características que este posee y de esta forma cumplir con el objetivo estratégico.')
-c2.caption('_Vista al Proyecto: [GitHub](%s)_ (%s)' % (main_repo, c2.image(image3, width=15)))
+c2.caption('_Vista al Proyecto: [GitHub](%s)_ (%s)' % (main_repo, img2))
 
 st.header('ETL del Proyecto')
 st.subheader('_Extracción, Transformación, Carga de Datos_')
 c3 = st.container()
+img3 = c3.image(image4, width=15)
 c3.write('El proceso de ETL tiene como principales actores el lenguaje de programación Python, '
          'el framework Apache Spark, Amazon AWS como encargado de carga incremental, almacenamiento en la nube (RDS) y '
          'finalmente MySQL como motor SQL. El mismo esta programado para ejecutarse todos los dias a las 19:00 GMT-5.')
 c3.image(image, caption='DW Pipeline', width=350)
 c3.write('Por medio de un video explicativo se demuestra el paso a paso del proceso.')
-c3.caption('_Vista ETL: [Ir al Video](%s)_ (%s)' % (etl, c3.image(image4, width=15)))
+c3.caption('_Vista ETL: [Ir al Video](%s)_ (%s)' % (etl, img3))
 
 st.header('Entregables')
 st.subheader('_Dashboard, Documentación_')
 c4 = st.container()
+img4 = c4.image(image3, width=15)
 c4.write('Power BI, es una herramienta de visualización y análisis de datos enfocada a la productividad empresarial, '
          'por este motivo, se implemento un Dashboard en el que se evidencian diferentes tipos de siniestralidad, '
          'como por ejemplo accidentes por calle, tipo, trafico, etc. De esta forma se pueden tomar decisiones '
          'que disminuyan aquellas estadísticas con el fin de mejorar la calidad vial en la ciudad de New York.')
 c4.write('Adicionalmente, se hace entrega del respectivo Manual de Usuario para el correcto manejo del Dashboard y '
          'de esta forma, aprovechar al máximo sus capacidades.')
-c4.caption('Para acceder a Documentos ingrese aquí: [Docs](%s)_ (%s)' % (docs, c4.image(image3, width=15)))
-c4.caption('Para acceder a Dashboard ingrese aquí: [Dashboard](%s)_ (%s)' % (dash, c4.image(image3, width=15)))
+c4.caption('Para acceder a Documentos ingrese aquí: [Docs](%s)_ (%s)' % (docs, img4))
+c4.caption('Para acceder a Dashboard ingrese aquí: [Dashboard](%s)_ (%s)' % (dash, img4))
 
 st.caption('_**HENRY**_')
 st.markdown("<a href='#an-lisis-de-accidentalidad-en-la-ciudad-de-new-york'>Ir Arriba ^</a>", unsafe_allow_html=True)
