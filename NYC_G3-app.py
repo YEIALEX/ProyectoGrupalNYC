@@ -53,7 +53,7 @@ c3.caption('_Vista ETL: [Ir al Video](%s)_' % etl)
 c3.image(image4, width=15)
 
 st.header('Entregables')
-st.subheader('_Dashboard, Documentación_')
+st.subheader('_Dashboard, Documentación, IA_')
 
 c4 = st.container()
 c4.write('Power BI, es una herramienta de visualización y análisis de datos enfocada a la productividad empresarial, '
