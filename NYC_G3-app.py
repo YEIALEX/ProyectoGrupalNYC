@@ -11,6 +11,7 @@ main_repo = 'https://github.com/rupertsky/ProyectoGrupalNYC'
 etl = 'https://youtu.be/V90fLjwq7KQ'
 docs = 'https://github.com/rupertsky/ProyectoGrupalNYC/tree/main/Docs'
 dash = 'https://github.com/rupertsky/ProyectoGrupalNYC/tree/main/Visualizaci%C3%B3n'
+ia = 'https://rupertsky-proyectogrupalnyc-nyc-g3-app-tchzrg.streamlitapp.com/Predictor_Accidentados'
 #
 st.title('Análisis de accidentalidad en la ciudad de New York')
 
@@ -59,10 +60,15 @@ c4.write('Power BI, es una herramienta de visualización y análisis de datos en
          'por este motivo, se implemento un Dashboard en el que se evidencian diferentes tipos de siniestralidad, '
          'como por ejemplo accidentes por calle, tipo, trafico, etc. De esta forma se pueden tomar decisiones '
          'que disminuyan aquellas estadísticas con el fin de mejorar la calidad vial en la ciudad de New York.')
+c4.write('Por otro lado, se realizo un aplicativo de Inteligencia Artificial, encargado de predecir los siniestros '
+         'que ocurrirán en determinada Fecha, Dia, Hora, y Distrito. Esta herramienta es de vital importancia, ya que '
+         'predecir los siniestros de X lugar a Y hora, nos da una ventana gigantesca de tiempo para manejar mejor '
+         'los recursos y servicios, destinados a la atención de siniestros en multiples zonas.')
 c4.write('Adicionalmente, se hace entrega del respectivo Manual de Usuario para el correcto manejo del Dashboard y '
          'de esta forma, aprovechar al máximo sus capacidades.')
 c4.caption('_Para acceder a Documentos ingrese aquí: [Docs](%s)_' % docs,)
 c4.caption('_Para acceder a Dashboard ingrese aquí: [Dashboard](%s)_' % dash)
+c4.caption('_Para acceder a Predictor ingrese aquí: [IA](%s)_' % ia)
 
 c4.image(image5, width=30)
 st.caption('_**HENRY**_')
