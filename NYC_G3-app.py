@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 
-# image = Image.open('./Docs/DW_Pipeline.png')
+image = Image.open('Docs/DW_Pipeline.png')
 # LINKS
 main_repo = 'https://github.com/rupertsky/ProyectoGrupalNYC'
 etl = 'https://youtu.be/V90fLjwq7KQ'
@@ -30,7 +30,7 @@ c3 = st.container()
 c3.write('El proceso de ETL tiene como principales actores el lenguaje de programacion Python, '
          'el framework Apache Spark, Amazon AWS como encargado de carga incremental, almacenamiento en la nube (RDS) y '
          'finalmente MySQL como motor SQL. El mismo esta programado para ejecutarse todos los dias a las 19:00 GMT-5.')
-# c3.image(image, caption='DW Pipeline', width=500)
+c3.image(image, caption='DW Pipeline', width=500)
 c3.write('Por medio de un video explicativo se demuestra el paso a paso del proceso.')
 c3.caption('_Vista ETL: [Ir al Video](%s)_' % etl)
 
