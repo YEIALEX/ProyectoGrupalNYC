@@ -34,7 +34,7 @@ st.subheader('_Solución Propuesta_')
 c2 = st.container()
 c2.write('Para llevar a cabo el proyecto, se ideo un alcance en el que se especifican todas las '
          'características que este posee y de esta forma cumplir con el objetivo estratégico.')
-c2.caption('_Vista al Proyecto: [GitHub](%s)_(%s)' % (main_repo, c2.image(image3, width=35)))
+c2.caption('_Vista al Proyecto: [GitHub](%s)_ (%s)' % (main_repo, c2.image(image3, width=15)))
 
 st.header('ETL del Proyecto')
 st.subheader('_Extracción, Transformación, Carga de Datos_')
@@ -44,7 +44,7 @@ c3.write('El proceso de ETL tiene como principales actores el lenguaje de progra
          'finalmente MySQL como motor SQL. El mismo esta programado para ejecutarse todos los dias a las 19:00 GMT-5.')
 c3.image(image, caption='DW Pipeline', width=350)
 c3.write('Por medio de un video explicativo se demuestra el paso a paso del proceso.')
-c3.caption('_Vista ETL: [Ir al Video](%s)_(%s)' % (etl, c3.image(image4, width=35)))
+c3.caption('_Vista ETL: [Ir al Video](%s)_ (%s)' % (etl, c3.image(image4, width=15)))
 
 st.header('Entregables')
 st.subheader('_Dashboard, Documentación_')
@@ -55,8 +55,8 @@ c4.write('Power BI, es una herramienta de visualización y análisis de datos en
          'que disminuyan aquellas estadísticas con el fin de mejorar la calidad vial en la ciudad de New York.')
 c4.write('Adicionalmente, se hace entrega del respectivo Manual de Usuario para el correcto manejo del Dashboard y '
          'de esta forma, aprovechar al máximo sus capacidades.')
-c4.caption('Para acceder a Documentos ingrese aquí: [Docs](%s)_(%s)' % (docs, c2.image(image3, width=35)))
-c4.caption('Para acceder a Dashboard ingrese aquí: [Dashboard](%s)_(%s)' % (dash, c2.image(image3, width=35)))
+c4.caption('Para acceder a Documentos ingrese aquí: [Docs](%s)_ (%s)' % (docs, c4.image(image3, width=15)))
+c4.caption('Para acceder a Dashboard ingrese aquí: [Dashboard](%s)_ (%s)' % (dash, c4.image(image3, width=15)))
 
 st.caption('_**HENRY**_')
 st.markdown("<a href='#an-lisis-de-accidentalidad-en-la-ciudad-de-new-york'>Ir Arriba ^</a>", unsafe_allow_html=True)
