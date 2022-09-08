@@ -5,6 +5,7 @@ image = Image.open('Docs/images/DW_Pipeline.png')
 image2 = Image.open('Docs/images/crash.jpg')
 image3 = Image.open('Docs/images/gitpng.png')
 image4 = Image.open('Docs/images/youtube-logo-5-2.png')
+image5 = Image.open('Docs/images/henry.png')
 # LINKS
 main_repo = 'https://github.com/rupertsky/ProyectoGrupalNYC'
 etl = 'https://youtu.be/V90fLjwq7KQ'
@@ -62,7 +63,7 @@ c4.write('Adicionalmente, se hace entrega del respectivo Manual de Usuario para 
          'de esta forma, aprovechar al máximo sus capacidades.')
 c4.caption('_Para acceder a Documentos ingrese aquí: [Docs](%s)_' % docs,)
 c4.caption('_Para acceder a Dashboard ingrese aquí: [Dashboard](%s)_' % dash)
-c4.image(image3, width=15)
 
+c4.image(image5, width=15)
 st.caption('_**HENRY**_')
 st.markdown("<a href='#an-lisis-de-accidentalidad-en-la-ciudad-de-new-york'>Ir Arriba ^</a>", unsafe_allow_html=True)
