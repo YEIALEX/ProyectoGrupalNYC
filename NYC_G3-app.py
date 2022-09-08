@@ -65,7 +65,7 @@ c4.write('Por otro lado, se realizo un aplicativo de Inteligencia Artificial, en
          'que ocurrirán en determinada Fecha, Dia, Hora, y Distrito. Esta herramienta es de vital importancia, ya que '
          'predecir los siniestros de X lugar a Y hora, nos da una ventana gigantesca de tiempo para manejar mejor '
          'los recursos y servicios, destinados a la atención de siniestros en multiples zonas.')
-c4.write('Adicionalmente, se hace entrega del respectivo Manual de Usuario para el correcto manejo del Dashboard y '
+c4.write('Finalmente, se hace entrega del respectivo Manual de Usuario para el correcto manejo del Dashboard y '
          'de esta forma, aprovechar al máximo sus capacidades.')
 c4.caption('_Para acceder a Documentos ingrese aquí: [Docs](%s)_' % docs,)
 c4.caption('_Para acceder a Dashboard ingrese aquí: [Dashboard](%s)_' % dash)
