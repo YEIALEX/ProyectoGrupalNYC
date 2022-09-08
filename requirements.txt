@@ -1,0 +1,14 @@
+streamlit==1.11.1
+pandas==1.4.3
+regex==2022.6.2
+numpy==1.22.3
+seaborn==0.11.2
+matplotlib==3.5.2
+scikit-learn==1.1.1
+sklearn==0.0
+PyMySQL==1.0.2
+SQLAlchemy==1.4.40
+SQLAlchemy-Utils==0.38.3
+DateTime==4.5
+Cython==0.29.32
+
