@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 
+# IMAGES
 image = Image.open('Docs/images/DW_Pipeline.png')
 image2 = Image.open('Docs/images/crash.jpg')
 image3 = Image.open('Docs/images/gitpng.png')
