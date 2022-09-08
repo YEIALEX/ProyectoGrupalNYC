@@ -13,3 +13,4 @@ DateTime==4.5
 Cython==0.29.32
 mysql-connector==2.2.9
 mysql-connector-python==8.0.30
+mysqlclient
