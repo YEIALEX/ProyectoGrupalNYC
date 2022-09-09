@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set()
 
+# LINKS
+ia = 'https://rupertsky-proyectogrupalnyc-nyc-g3-app-tchzrg.streamlitapp.com/Predictor_Accidentados'
+
 # Filtro y procesamiento de tabla collision, principal en la base de datos
 collision.drop(collision.filter(regex='vehicle_2|vehicle_3|vehicle_4|vehicle_5|code_2|code_3|code_4|code_5|killed'
                                       '|motorist|cyclist|pedestrians').columns,
@@ -94,3 +97,4 @@ st.pyplot(fig4)
 with st.expander('Ver mas...'):
     st.write('Los distritos con mayor numero de personas '
              'son aquellos que representan mayor accidentalidad en la ciudad.')
+st.caption('_Para acceder a Predictor ingrese aquí: [IA](%s)_' % ia)
