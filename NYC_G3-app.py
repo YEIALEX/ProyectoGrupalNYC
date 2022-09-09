@@ -2,11 +2,11 @@ import streamlit as st
 from PIL import Image
 
 # IMAGES
-image = Image.open('Docs/images/DW_Pipeline.png')
-image2 = Image.open('Docs/images/crash.jpg')
-image3 = Image.open('Docs/images/gitpng.png')
-image4 = Image.open('Docs/images/youtube-logo-5-2.png')
-image5 = Image.open('Docs/images/henry.png')
+image = Image.open('back_img/DW_Pipeline.png')
+image2 = Image.open('back_img/crash.jpg')
+image3 = Image.open('back_img/gitpng.png')
+image4 = Image.open('back_img/youtube-logo-5-2.png')
+image5 = Image.open('back_img/henry.png')
 # LINKS
 main_repo = 'https://github.com/rupertsky/ProyectoGrupalNYC'
 etl = 'https://youtu.be/V90fLjwq7KQ'
