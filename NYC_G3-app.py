@@ -11,7 +11,9 @@ image5 = Image.open('Docs/images/henry.png')
 main_repo = 'https://github.com/rupertsky/ProyectoGrupalNYC'
 etl = 'https://youtu.be/V90fLjwq7KQ'
 docs = 'https://github.com/rupertsky/ProyectoGrupalNYC/tree/main/Docs'
-dash = 'https://github.com/rupertsky/ProyectoGrupalNYC/tree/main/Visualizaci%C3%B3n'
+dashgit = 'https://github.com/rupertsky/ProyectoGrupalNYC/tree/main/Visualizaci%C3%B3n'
+dash = 'https://app.powerbi.com/groups/me/reports/3e4f9d7a-4ccd-404c-9cee-f4673b6b1fec?ctid=e8214937-233b-4b36-86bf' \
+       '-0b5f3337bee1&pbi_source=linkShare&bookmarkGuid=e4f7b758-574a-491b-acd0-4e8d67ea7224 '
 ia = 'https://rupertsky-proyectogrupalnyc-nyc-g3-app-tchzrg.streamlitapp.com/Predictor_Accidentados'
 #
 st.title('Análisis de accidentalidad en la ciudad de New York')
@@ -69,6 +71,7 @@ c4.write('Finalmente, se hace entrega del respectivo Manual de Usuario para el c
          'de esta forma, aprovechar al máximo sus capacidades.')
 c4.caption('_Para acceder a Documentos ingrese aquí: [Docs](%s)_' % docs,)
 c4.caption('_Para acceder a Dashboard ingrese aquí: [Dashboard](%s)_' % dash)
+c4.caption('_Para acceder a Dashboard ingrese aquí: [GitDashboard](%s)_' % dashgit)
 c4.caption('_Para acceder a Predictor ingrese aquí: [IA](%s)_' % ia)
 
 c4.image(image5, width=30)
