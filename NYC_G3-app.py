@@ -71,7 +71,7 @@ c4.write('Finalmente, se hace entrega del respectivo Manual de Usuario para el c
          'de esta forma, aprovechar al máximo sus capacidades.')
 c4.caption('_Para acceder a Documentos ingrese aquí: [Docs](%s)_' % docs,)
 c4.caption('_Para acceder a Dashboard ingrese aquí: [Dashboard](%s)_' % dash)
-c4.caption('_Para acceder a Dashboard ingrese aquí: [GitDashboard](%s)_' % dashgit)
+c4.caption('_Para acceder a GitDashboard ingrese aquí: [GitDashboard](%s)_' % dashgit)
 c4.caption('_Para acceder a Predictor ingrese aquí: [IA](%s)_' % ia)
 
 c4.image(image5, width=30)
